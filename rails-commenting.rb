@@ -6,25 +6,25 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# ---1)
+# ---1) This states that BlogPostsCOntroller is a class that inherits from the ApplicationController and allows our new controller to inherit all the methods and behaviors defined in our ApplicationController.
 class BlogPostsController < ApplicationController
   def index
-    # ---2)
+    # ---2) This states that at the index we want to see all of our blod posts
     @posts = BlogPost.all
   end
 
-  # ---3)
+  # ---3)This is creating a method for show which will bring up a specific instance in our databse and we define show as a post that is refrenced by the params ID
   def show
     @post = BlogPost.find(params[:id])
   end
 
-  # ---4)
+  # ---4)This is creating a method for new which creates a new instance in our application of a new post
   def new
     @post = BlogPost.new
   end
 
   def create
-    # ---5)
+    # ---5)This is creating a method for create, which creates the new blog post with the specified params for our post in the strong params and allows us to pass a title
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
