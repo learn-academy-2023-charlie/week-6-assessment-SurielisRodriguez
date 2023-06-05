@@ -14,6 +14,12 @@
 
 // a) Create a test with an expect statement using the variable provided.
 
+describe('function takes in array of objects and returns sentence with each name capitalized', () => {
+  it("capitalizes each name", () => {
+    expect(Test(hitchhikersCharacters).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]))
+  })
+})
+
 const hitchhikersCharacters = [
   { name: "ford prefect", occupation: "a hitchhiker" },
   { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
@@ -22,6 +28,8 @@ const hitchhikersCharacters = [
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
 // b) Create the function that makes the test pass.
+
+
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 
