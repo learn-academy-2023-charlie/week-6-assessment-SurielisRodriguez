@@ -29,6 +29,17 @@ const hitchhikersCharacters = [
 
 // b) Create the function that makes the test pass.
 
+// Pseudo Code 
+// create a function called sentence that maps through our array and passes in the parameter for the character
+// declare var is the key we want to split within our  character object, we split by the space
+// map the new array and pass in parameter for word
+// return and tell our program to upper case the value at zero index using the .charAt() and .toUpperCase () methods
+// add back the rest of the name starting at the 1 index using .slice(1) to add back the rest of the name
+// declare a second variable for our full name put together and pass the last split arrays we made through to put them together using the .join method
+// using string interpolation we tell the program to return the value for the fullName that we created and the characters occupation to put or sentence together
+// console log to see expected outcome.
+
+
 const sentence = hitchhikersCharacters.map(character => {
   let capitalized = character.name.split(" ").map(word => {
      return  word.charAt(0).toUpperCase()+ word.slice(1)
@@ -53,6 +64,13 @@ const hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
 // b) Create the function that makes the test pass.
+
+// Pseudo code
+// create a method called remainders that takes in an array as parameter
+// create variable that stores the array filtered by the type using the .filter method.
+// map the filtered array to be able to assign a second variable which I designated as my remain,  then return that var is the remainder of the number divided by 3 
+// return filter val
+//console log to see expected outputs. 
 
 const remainders = (array) => {
   let filter = array.filter(item => typeof item === 'number' ).map(number => {
@@ -87,6 +105,10 @@ const cubeAndSum2 = [0, 5, 10]
 // Pseudo Code
 // create method called cuber that takes the array as a parameter.
 // create variable in which numbers array gets mapped and with the variable of num that returns the values as numbers instead of string by using the parseInt method.
+// return cube number by using exponential operator
+// return the numbers and using the .reduce method we can take all of the numbers within my array and makes it into one element, specifying that I wanted each number to add to the next. 
+// console log to see expected output.
+
 
 const cuber = (numArray) => {
   let numbers = numArray.map( num => {
